@@ -1,6 +1,9 @@
 # 범수 ♥ 서영 모바일 청첩장
 
-YouTube-inspired mobile wedding invitation for 2027-12-11.
+독립 운영 버전입니다.
 
-Frontend: Vercel
-Backend and media: Supabase
+- Frontend: Vercel 또는 GitHub Pages
+- Backend / DB / media: Supabase
+- Admin: `?admin=1`
+
+Higgsfield 구독과 무관하게 운영하도록 분리했습니다.
