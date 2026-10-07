@@ -156,3 +156,154 @@ html,body{overscroll-behavior-y:none}
   -webkit-user-drag:none;
   user-select:none;
 }
+
+/* YouTube-style photo social controls */
+.lightbox-social-actions{
+  position:fixed;
+  z-index:4;
+  right:max(14px,calc((100vw - 520px)/2 + 14px));
+  bottom:calc(84px + env(safe-area-inset-bottom));
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:13px;
+}
+.lightbox-social-actions button{
+  border:0;
+  background:transparent;
+  color:#fff;
+  padding:0;
+  display:grid;
+  justify-items:center;
+  gap:4px;
+  cursor:pointer;
+}
+.social-icon-circle{
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:rgba(255,255,255,.16);
+  backdrop-filter:blur(6px);
+}
+.lightbox-social-actions button.active .social-icon-circle{
+  background:#fff;
+  color:var(--lav);
+}
+.lightbox-social-actions small{
+  font-size:11px;
+  font-weight:800;
+  text-shadow:0 1px 3px rgba(0,0,0,.55);
+}
+.photo-comments-backdrop{
+  position:fixed;
+  z-index:220;
+  inset:0;
+  background:rgba(0,0,0,.36);
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+}
+.photo-comments-sheet{
+  width:min(100%,520px);
+  max-height:72dvh;
+  background:#fff;
+  border-radius:18px 18px 0 0;
+  display:grid;
+  grid-template-rows:auto minmax(0,1fr) auto;
+  overflow:hidden;
+}
+.photo-comments-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:15px 16px 12px;
+  border-bottom:1px solid var(--line);
+}
+.photo-comments-head>div{
+  display:flex;
+  align-items:center;
+  gap:7px;
+}
+.photo-comments-head strong{font-size:16px}
+.photo-comments-head span{font-size:12px;color:var(--muted)}
+.photo-comments-head button{
+  width:34px;
+  height:34px;
+  border:0;
+  border-radius:50%;
+  background:var(--soft);
+  font-size:22px;
+  cursor:pointer;
+}
+.photo-comments-list{
+  overflow-y:auto;
+  padding:14px 16px;
+  display:grid;
+  gap:15px;
+}
+.photo-comments-list article{
+  display:grid;
+  grid-template-columns:34px 1fr;
+  gap:10px;
+}
+.photo-comment-avatar{
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  background:var(--lavsoft);
+  color:var(--lav);
+  display:grid;
+  place-items:center;
+  font-size:12px;
+  font-weight:900;
+}
+.photo-comments-list strong{font-size:12px}
+.photo-comments-list p{
+  margin:4px 0 0;
+  font-size:14px;
+  line-height:1.5;
+}
+.photo-comments-empty{
+  color:var(--muted);
+  text-align:center;
+  font-size:13px;
+  padding:28px 0;
+}
+.photo-comment-form{
+  border-top:1px solid var(--line);
+  padding:10px 12px calc(12px + env(safe-area-inset-bottom));
+  background:#fff;
+  display:grid;
+  gap:7px;
+}
+.photo-comment-form>input,
+.photo-comment-form>div input{
+  width:100%;
+  border:1px solid #ddd;
+  border-radius:10px;
+  padding:10px 11px;
+  outline:none;
+  font-size:13px;
+}
+.photo-comment-form>div{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  gap:7px;
+}
+.photo-comment-form button{
+  border:0;
+  border-radius:10px;
+  padding:0 14px;
+  background:var(--lav);
+  color:#fff;
+  font-size:12px;
+  font-weight:800;
+  cursor:pointer;
+}
+.photo-comment-form button:disabled{opacity:.55}
+@media(max-width:640px){
+  .lightbox-social-actions{right:10px;bottom:calc(76px + env(safe-area-inset-bottom))}
+  .social-icon-circle{width:42px;height:42px}
+}
