@@ -109,3 +109,7 @@ html,body{overscroll-behavior-y:none}
   -webkit-user-drag:none;
   user-select:none;
 }
+
+/* Mobile photo viewer: horizontal swipe changes photo, downward swipe dismisses */
+.lightbox{transition:background .16s ease}
+.gallery-lightbox-figure{transform-origin:center center}
