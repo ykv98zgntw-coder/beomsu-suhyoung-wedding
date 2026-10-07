@@ -9,7 +9,7 @@ const lines=v=>(v||'').split('\n').map(x=>x.trim()).filter(Boolean)
 function SvgIcon({children,size=24}){return <svg aria-hidden="true" viewBox="0 0 24 24" width={size} height={size} fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">{children}</svg>}
 function BellIcon(){return <SvgIcon size={27}><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"/><path d="M10 21h4"/></SvgIcon>}
 function SearchIcon(){return <SvgIcon size={27}><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></SvgIcon>}
-function CompassIcon(){return <SvgIcon size={23}><circle cx="12" cy="12" r="9"/><path d="m15.2 8.8-2.1 4.3-4.3 2.1 2.1-4.3 4.3-2.1Z"/></SvgIcon>}
+function CompassIcon(){return <SvgIcon size={26}><circle cx="12" cy="12" r="9"/><path d="m15.2 8.8-2.1 4.3-4.3 2.1 2.1-4.3 4.3-2.1Z"/></SvgIcon>}
 function HomeIcon(){return <SvgIcon size={27}><path d="m3 11 9-7 9 7v9H6v-9"/><path d="M9 20v-6h6v6"/></SvgIcon>}
 function ShortsIcon(){return <svg aria-hidden="true" width="28" height="28" viewBox="0 0 28 28"><path d="M17.6 2.7c2.4-1.2 5.4-.2 6.6 2.2 1.1 2.2.4 4.8-1.7 6.1l-3.7 2.2 3.4 1.9c2.4 1.4 3.2 4.4 1.8 6.8-1.4 2.3-4.4 3.1-6.7 1.8L7.9 18.3c-2.5-1.4-3.3-4.6-1.8-7 1.4-2.2 4.1-3 6.4-1.9l3.1 1.6-2.5-1.5c-2.4-1.4-3.2-4.5-1.7-6.9 1.3-2.2 4.1-3 6.2-1.9Z" fill="currentColor"/><path d="m12 10.7 7 3.8-7 3.8v-7.6Z" fill="white"/></svg>}
 function PlusIcon(){return <SvgIcon size={30}><path d="M12 5v14M5 12h14"/></SvgIcon>}
