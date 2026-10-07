@@ -113,3 +113,19 @@ html,body{overscroll-behavior-y:none}
 /* Mobile photo viewer: horizontal swipe changes photo, downward swipe dismisses */
 .lightbox{transition:background .16s ease}
 .gallery-lightbox-figure{transform-origin:center center}
+
+/* Guestbook author controls */
+.comment-body{min-width:0}
+.comment-head{display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+.my-comment-badge{display:inline-flex;align-items:center;height:20px;padding:0 7px;border-radius:999px;background:var(--lavsoft);color:var(--lav);font-size:10px;font-weight:800}
+.comment-footer{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.my-comment-actions{display:flex;align-items:center;gap:6px}
+.my-comment-actions button{border:0;background:transparent;color:var(--muted);padding:3px 4px;font-size:11px;font-weight:700;cursor:pointer}
+.my-comment-actions button:last-child{color:#a15d72}
+.guestbook-edit-form{display:grid;gap:8px;padding:10px;border-radius:10px;background:var(--soft)}
+.guestbook-edit-form input,.guestbook-edit-form textarea{width:100%;border:1px solid #d8d8d8;border-radius:9px;background:#fff;padding:9px 10px;font-size:13px;outline:none}
+.guestbook-edit-form textarea{min-height:72px;resize:vertical}
+.guestbook-edit-actions{display:flex;justify-content:flex-end;gap:7px}
+.guestbook-edit-actions button{border:0;border-radius:16px;padding:7px 11px;background:#fff;color:var(--muted);font-size:11px;font-weight:800}
+.guestbook-edit-actions .save{background:var(--lav);color:#fff}
+.composer-actions button:disabled{opacity:.55;cursor:default}
